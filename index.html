@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <!--A little custom CSS-->
+  <style>
+    html {
+      font-family: Helvetica, Arial, sans-serif
+    }
+
+    body {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .narrow {
+      max-width: 700px;
+      margin: auto
+    }
+
+    .wide {
+      max-width: 1200px;
+      margin: auto
+    }
+
+    .larger {
+      font-size: 28px;
+    }
+
+    #showMe {
+      display: none;
+    }
+
+    .aboutbox {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .leadcol {
+      width: 30%;
+    }
+
+    li {
+      margin-left: 45px;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: rgb(87, 87, 87);
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <div class="narrow">
+    <h1 id="top">Interactive CDC Clear Communication Index</h1>
+
+    <div class="aboutbox p-3 my-4">
+      <p>This is a simple interactive form of the <a
+          href="https://www.cdc.gov/ccindex/index.html">CDC Clear Communication Index</a>. The CDC says, "The CDC Clear Communication Index (Index) is a research-based tool to help you develop and assess public communication materials." If you're working on a fact sheet, pamphlet, PSA campaign, or anything remotely similar, you can use this to score and improve your material.</p>
+    </div>
+
+  </div>
+
+  <div class="wide">
+
+    <div class="row my-5">
+      <div class="col-md-6">
+        <h2>Before you begin</h2>
+        <p>Identify your primary audience, their health literacy skills, your primary
+          communication objective, and main message. You must know these 4 pieces of information to score
+          the material accurately. If you don’t have this information, wait until you do to score the material.</p>
+          <p><strong>Note about translated materials</strong>: If the audiences for the English and non-English versions are
+            different, you should create and score the materials separately to account for audience differences.</p>
+        <h2 class="mt-4">Using the score sheet</h2>
+            <p>The Index has a total of 20 items in 4 parts. These 20 items are presented as questions.</p>
+            <ul>
+              <li>Questions 1-11 in Part A apply to all materials.</li>
+              <li>Questions 12-20 in Parts B, C, and D may not apply to all materials.</li>
+              <li>Choose one answer for each item you score.</li>
+              <li>Only score a point when all instances of an item in the material meet the criteria.</li>
+            </ul>
+              <p><a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">More detailed descriptions and examples of each item can be found in the User Guide</a>.</p>
+      </div>
+
+      <div class="col-md-6">
+        <h3 class="mt-4">1. Who is your primary audience?</h3>
+          <em>Note: See Appendix B of the <a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf"><a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a></a> for a list of common public health audiences.</em>
+        <h3 class="mt-4">2. What do you know about the health literacy skills of your audience?</h3>
+        <em>List as many relevant characteristics about your audience as you can. Try and include evidence about their
+          literacy and numeracy skills; words, numbers, and health concepts they find familiar; their prior experience
+          with the topic; and their ability to comprehend different information formats, such as graphs. If you don’t
+          have any information at all, assume average to low health literacy skills. </em>
+        <h3 class="mt-4">3. What is your primary communication objective?</h3>
+        <em>A communication objective is what you want your audience to think, feel, or do after they receive the
+          message or material. Example 1: Increase the proportion of women between 18-25 years who intend
+          to increase consumption of folic acid. Example 2: Increase the proportion of sexually active adults with
+          favorable attitudes about taking an HIV test.</em>
+        <h3 class="mt-4">4. What is the main message statement in the material?</h3>
+        <em>The main message statement is the one thing the audience must remember. The statement may be 1-3
+          short sentences. If you are reviewing an existing material with multiple messages, list all possible messages. </em>
+      </div>
+
+    </div>
+
+<div class="row my-5">
+  <hr>
+</div>
+
+    <!--Text-->
+    <div class="row my-5">
+      <h2>Part A: Core</h2>
+      <p>The items in this section (1-11) apply to all materials.</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="leadcol">Guideline</th>
+            <th scope="col">Description</th>
+            <th scope="col">Passes?
+            </th>
+            <th scope="col">Applies?</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1. Does the material contain one main message statement?</th>
+            <td>A main message is the one thing you want to communicate to a person or group
+              that they must remember. A topic, such as heart disease or seasonal flu, isn’t a
+              main message statement. If the material contains several messages and no main
+              message, answer no. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 5). <br><br>NOTE: If you answered No to Question 1, score 0 for Questions 2-4 and
+              continue to Question 5.</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+                <input type="radio" class="btn-check" name="q1" id="q1-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q1-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q1" id="q1-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q1-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na1">
+                  <input class="form-check-input" type="checkbox" value="1" id="na1" onchange="notApplicable(1)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <th scope="row">2. Is the main message at the top, beginning, or front of the material?</th>
+            <td>The main message must be in the first paragraph or section. A section is a block of
+              text between headings. For a Web material, the first section must be fully visible
+              without scrolling. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 6) </td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q2" id="q2-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q2-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q2" id="q2-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q2-0">No</label>
+              </div>
+            </td>
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na2">
+                  <input class="form-check-input" type="checkbox" value="1" id="na2" onchange="notApplicable(2)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">3. Is the main message emphasized with visual cues?</th>
+            <td>If the main message is emphasized with font, color, shapes, lines, arrows or
+              headings, such as “What you need to know,” answer yes. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 7)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q3" id="q3-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q3-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q3" id="q3-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q3-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na3">
+                  <input class="form-check-input" type="checkbox" value="1" id="na3" onchange="notApplicable(3)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">4. Does the material contain at least one visual that conveys or supports the
+              main message?</th>
+            <td>For example, count photographs, line drawings, graphs and infographics as
+              visuals. If the visual doesn’t have a caption or labels, answer no. If the visual has
+              human figures who aren’t performing the recommended behaviors, answer no.
+              (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 8)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q4" id="q4-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q4-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q4" id="q4-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q4-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na4">
+                  <input class="form-check-input" type="checkbox" value="1" id="na4" onchange="notApplicable(4)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">5. Does the material include one or more calls to action for the primary
+              audience?</th>
+            <td>If the material includes a specific behavioral recommendation, a prompt to get
+              more information, a request to share information with someone else, or a broad
+              call for change, answer yes. If the call to action is for someone other than the
+              primary audience, answer no. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 10)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q5" id="q5-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q5-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q5" id="q5-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q5-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na5">
+                  <input class="form-check-input" type="checkbox" value="1" id="na5" onchange="notApplicable(5)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">6. Do both the main message and the call to action use the active voice?</th>
+            <td>If only the main message or only the call to action uses the active voice, answer no.
+              If you answered no to #1 or #5, answer no. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 11)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q6" id="q6-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q6-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q6" id="q6-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q6-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na6">
+                  <input class="form-check-input" type="checkbox" value="1" id="na6" onchange="notApplicable(6)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">7. Does the material always use words the primary audience uses?</th>
+            <td>If all specialized or unfamiliar terms are explained or described (not just defined)
+              the first time they are used, answer yes. Acronyms and abbreviations must be
+              spelled out and explained if unfamiliar to the audience. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 12)</td>
+
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q7" id="q7-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q7-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q7" id="q7-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q7-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na7">
+                  <input class="form-check-input" type="checkbox" value="1" id="na7" onchange="notApplicable(7)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">8. Does the material use bulleted or numbered lists? </th>
+            <td>If the material contains a list with more than 7 items, and the list is not broken
+              up into sub-lists, answer no. If the list is for additional information or references
+              only or at the end of the material, answer no. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 14)
+            </td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q8" id="q8-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q8-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q8" id="q8-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q8-0">No</label>
+              </div>
+            </td>
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na8">
+                  <input class="form-check-input" type="checkbox" value="1" id="na8" onchange="notApplicable(8)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">9. Is the material organized in chunks with headings?</th>
+            <td>This item applies to prose text and lists. If the chunks contain more than one idea
+              each, answer no. If the headings don’t match the information chunks, answer no.
+              (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 15)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q9" id="q9-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q9-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q9" id="q9-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q9-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na9">
+                  <input class="form-check-input" type="checkbox" value="1" id="na9" onchange="notApplicable(9)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">10. Is the most important information the primary audience needs
+              summarized in the first paragraph or section? </th>
+            <td>The most important information must include the main message. A section is a
+              block of text between headings. For a Web material, the first section must be fully
+              visible without scrolling. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 17)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q10" id="q10-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q10-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q10" id="q10-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q10-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na10">
+                  <input class="form-check-input" type="checkbox" value="1" id="na10" onchange="notApplicable(10)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">11. Does the material explain what authoritative sources, such as subject
+              matter experts and agency spokespersons, know and don’t know about
+              the topic? </th>
+            <td>If the material addresses both, answer yes. If the material addresses only one (what
+              is known or not known), answer no. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 18)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q11" id="q11-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q11-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q11" id="q11-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q11-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na11">
+                  <input class="form-check-input" type="checkbox" value="1" id="na11" onchange="notApplicable(11)" checked disabled>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+    <!--Arrangement-->
+    <div class="row my-5">
+      <h2>Part B: Behavioral Recommendations </h2>
+      <p>Does the material include one or more behavioral recommendations for the primary audience? If yes, score items 12-14. If no, mark them N/A and skip to Part C.
+</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="leadcol">Guideline</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rating
+            </th>
+            <th scope="col">Applies?</th>
+          </tr>
+
+          <tr>
+            <th scope="row">12. Does the material include one or more behavioral recommendations for
+              the primary audience?</th>
+            <td>CoIf no, STOP here and don’t score Part B. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 19)</td>
+
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q12" id="q12-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q12-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q12" id="q12-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q12-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na12">
+                  <input class="form-check-input" type="checkbox" value="1" id="na12" onchange="notApplicable(12)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">13. Does the material explain why the behavioral recommendation(s) is
+              important to the primary audience? </th>
+            <td>If you offer only numbers to explain the importance of the behavioral
+              recommendation with no other relevant information for the audience, answer no.
+              (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 20)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q13" id="q13-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q13-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q13" id="q13-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q13-0">No</label>
+              </div>
+            </td>
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na13">
+                  <input class="form-check-input" type="checkbox" value="1" id="na13" onchange="notApplicable(13)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">14. Does the behavioral recommendation(s) include specific directions about
+              how to perform the behavior? </th>
+            <td>This may include step-by-step directions or a simple description (for example:
+              Look for cereal with 100% daily value of folic acid). If the material includes
+              information about when and how to contact a medical provider or health official,
+              answer yes. If the material mentions when and how often to perform a behavior,
+              answer yes. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 21)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q14" id="q14-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q14-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q14" id="q14-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q14-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na14">
+                  <input class="form-check-input" type="checkbox" value="1" id="na14" onchange="notApplicable(14)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+      </table>
+    </div>
+
+    <!--Color-->
+    <div class="row my-5">
+      <h2>Part C: Numbers</h2>
+      <p>Does the material include one or more numbers related to the topic? If yes, score items 15-17. If no, mark them N/A and skip to Part D.
+</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="leadcol">Guideline</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rating
+            </th>
+            <th scope="col">Applies?</th>
+
+          </tr>
+        </thead>
+        <tbody>
+  
+
+          <tr>
+            <th scope="row">15. Does the material always present numbers the primary audience uses? </th>
+            <td>Many audiences find numbers distracting or confusing. Make sure the numbers
+              in the material are both familiar and necessary to support or explain the
+              main message statement. If not, delete them. Whole numbers are used by most
+              audiences. The types of numbers used will vary for each audience. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a>
+              page 22)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q15" id="q15-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q15-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q15" id="q15-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q15-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na15">
+                  <input class="form-check-input" type="checkbox" value="1" id="na15" onchange="notApplicable(15)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">16. Does the material always explain what the numbers mean? </th>
+            <td>For example, “The amount of meat recommended as part of a healthy meal is 3
+              to 4 ounces – it will look about the same size as a deck of cards.” (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a>
+              page 23)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q16" id="q16-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q16-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q16" id="q16-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q16-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na16">
+                  <input class="form-check-input" type="checkbox" value="1" id="na16" onchange="notApplicable(16)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">17. Does the audience have to conduct mathematical calculations? </th>
+            <td>Adding, subtracting, multiplying, and dividing involve calculations. Calculating
+              a common denominator for the purposes of comparison is a mathematical
+              calculation. Use the same denominator, even for absolute risk (example: 1 out
+              of 3), throughout the material so that audiences don’t have to calculate. (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 24).<br><br>
+              NOTE: for this item, Yes is scored 0 and No is scored 1. </td>
+
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q17" id="q17-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q17-1">No</label>
+
+                <input type="radio" class="btn-check" name="q17" id="q17-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q17-0">Yes</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na17">
+                  <input class="form-check-input" type="checkbox" value="1" id="na17" onchange="notApplicable(17)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!--Lines-->
+    <div class="row my-5">
+      <h2>Part D: Risk</h2>
+      <p>Does the material present information, including numbers, about risk? If yes, score items 18-20 (Items 19 and 20 have a “not applicable” (NA) option). If no, skip to Calculate Score.
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="leadcol">Guideline</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rating
+            </th>
+            <th scope="col">Applies?</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <tr>
+            <th scope="row">18. Does the material explain the nature of the risk?</th>
+            <td>If the material states the threat or harm and how and why people may be affected,
+              answer yes. If the material has only the threat or harm but no explanation,
+              answer no. For example, if the material states there are 1,000 new cases of a
+              contagious disease in Springfield, does it also state that people in Springfield may
+              be more likely to get the disease, why they may be more likely, and how serious the
+              threat of the disease is? (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 26)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q18" id="q18-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q18-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q18" id="q18-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q18-0">No</label>
+              </div>
+            </td>
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na18">
+                  <input class="form-check-input" type="checkbox" value="1" id="na18" onchange="notApplicable(18)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">19. Does the material address both the risks and benefits of the
+              recommended behaviors?</th>
+            <td>This includes actual risks and benefits and those perceived by your audience. If
+              the material addresses only risks or only benefits, answer no. If no behavioral
+              recommendation is presented, answer not applicable (NA). (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 27)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q19" id="q19-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q19-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q19" id="q19-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q19-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na19">
+                  <input class="form-check-input" type="checkbox" value="1" id="na19" onchange="notApplicable(19)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">20. If the material uses numeric probability to describe risk, is the
+              probability also explained with words or a visual? </th>
+            <td>Examples of probability information in a risk message are numbers (such as 1 in
+              5 or 20%). If the material presents numeric risk and also uses text to explain the
+              probability, answer yes. If the material presents numeric risk and also uses a visual
+              to explain the probability, answer yes. If the material only presents numeric risk,
+              answer no. If the material does not include this type of probability information,
+              answer not applicable (NA). (<a href="https://www.cdc.gov/ccindex/pdf/ClearCommUserGuide.pdf">User Guide</a> page 28)</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="q120" id="q20-1" autocomplete="off" value="1">
+                <label class="btn btn-outline-primary" for="q20-1">Yes</label>
+
+                <input type="radio" class="btn-check" name="q20" id="q20-0" autocomplete="off" value="0">
+                <label class="btn btn-outline-primary" for="q20-0">No</label>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="na20">
+                  <input class="form-check-input" type="checkbox" value="1" id="na20" onchange="notApplicable(20)" checked>
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <div class="row my-5">
+      <div class="col-md-1"></div>
+      <div class="col-md-3 d-grid gap-1">
+        <button onclick="test()" class="btn btn-primary my-2">Score me</button>
+        <button onclick="reset()" class="btn btn-outline-secondary my-2">Reset form</button>
+      </div>
+      <div class="col-md-7" id="showMe">
+        <div class="larger">
+          <p>Score:
+            <span id="yourScore" class="badge bg-primary">your score</span> out of <span id="outOf"
+              class="badge bg-primary">available points</span>: <span id="pct" class="badge bg-primary">%</span>
+          </p>
+        </div>
+        <p id="comment"></p>
+      </div>
+      <div class="col-md-1"></div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="narrow">
+    <div class="aboutbox p-3 my-4">
+      <p><a href="https://github.com/mmontesanonyc/interactive-CDC-CCI">View this tool's repository and
+          source code here</a>.</p>
+    </div>
+  </div>
+
+  <script>
+    // initial variables.
+    var naCount = 0;
+    var n_questions = 20;    // revise this with the number of questions
+    var possibleMax = n_questions; // this is the possible maximum score.
+
+    // removes scores from questions when NA is selected
+    function notApplicable(x) {
+      if (document.getElementById('na' + x).checked) {
+        document.getElementById('q' + x + '-1').disabled = false
+        document.getElementById('q' + x + '-0').disabled = false
+        naCount = naCount - 1;
+      } else {
+        console.log("question " + x + " is not applicable");
+        document.getElementById('q' + x + '-1').disabled = true
+        document.getElementById('q' + x + '-0').disabled = true
+        naCount = naCount + 1;
+      }
+
+      console.log(naCount)
+    }
+
+
+
+    // runs on button click and provides final score
+    function test() {
+      // First set loops through score buttons, adding values to score
+      var score = 0;
+      for (var i = 1; i <= n_questions; i++) {
+        var answers = document.getElementsByName('q' + i);
+        for (var j = 0; j < answers.length; j++) {
+          if (answers[j].checked) {
+            score += +answers[j].value;
+            break;
+          }
+        }
+      }
+
+
+      // subtract the NAs from the possibleMax score
+      possibleMax = possibleMax - naCount;
+      // note that we add the VALUE of each NA (2) to naCount, so no need to double it.
+
+      // print your score and the possible max to the Results table.
+      document.getElementById('showMe').style.display = "block";
+      document.getElementById('yourScore').innerHTML = score + " points";
+      document.getElementById('outOf').innerHTML = possibleMax + " points";
+      var yourPercent = (100 * score / possibleMax).toFixed(1)
+      document.getElementById('pct').innerHTML = yourPercent + " %";
+      window.scrollTo(0, document.body.scrollHeight);
+
+      if (yourPercent >= 90) {
+        document.getElementById('comment').innerHTML = 'Excellent! You have addressed most items that make materials easier to understand and use.'
+      } else {
+        document.getElementById('comment').innerHTML = 'Note which items scored 0 points. Use the descriptions and examples in the User Guide to revise and improve the material. Then apply the Index again to check your work. You can use the Index as many times as you need to revise the material to get a score of 90 or above.'
+      }
+
+    }
+
+    // Code for looping/scoring gratefully used from http://jsfiddle.net/C37Vh/
+
+    // Reset the page by just reloading.
+    function reset() {
+      location.reload()
+    }
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
